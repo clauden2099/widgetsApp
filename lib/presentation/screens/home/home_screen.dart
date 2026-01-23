@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
+import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -54,7 +56,11 @@ class _CustmListTile extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: (){
-        
+        /*Con la navegación de go router solo hay que llamar al context y usar 
+        alguno de los métodos de navegación, con el push es que se genera un stack
+        de pantallas y en el arguemnto del método se debe de indicar la url o path
+        hacía donde se ira con la navegación */
+        context.push(menuItem.link);
       },
     );
   }
