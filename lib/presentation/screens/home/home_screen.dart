@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
+import 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = 'home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -60,7 +62,9 @@ class _CustmListTile extends StatelessWidget {
         alguno de los métodos de navegación, con el push es que se genera un stack
         de pantallas y en el arguemnto del método se debe de indicar la url o path
         hacía donde se ira con la navegación */
-        context.push(menuItem.link);
+        //context.push(menuItem.link);
+        //Navegación el nombre de la pantalla
+        context.pushNamed(ButtonsScreen.name);
       },
     );
   }
