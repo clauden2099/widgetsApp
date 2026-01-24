@@ -64,7 +64,7 @@ class _CustmListTile extends StatelessWidget {
         hacía donde se ira con la navegación */
         //context.push(menuItem.link);
         //Navegación el nombre de la pantalla
-        context.pushNamed(ButtonsScreen.name);
+        context.pushNamed(CardsScreen.name);
       },
     );
   }
