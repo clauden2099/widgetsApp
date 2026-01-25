@@ -13,6 +13,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     /*Se define el router de pantallas con go router */
     return MaterialApp.router(
+      title: "Flutter Widgets",
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 6).getTheme(),
