@@ -42,6 +42,8 @@ class AppTutorialScreen extends StatefulWidget {
 
 class _AppTutorialScreenState extends State<AppTutorialScreen> {
 
+  /*Con un widget controller se tiene más control sobre la lógica de este y 
+  ademas sobre el estado en el que se encuentra el widget en ese momento*/
   final PageController pageViewController = PageController();
   bool endReach = false;
 
