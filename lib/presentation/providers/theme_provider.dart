@@ -12,4 +12,23 @@ final colorListProvider = Provider((ref) => colorList);
 
 final selectedColorProvider = StateProvider<int>((ref) => 1);
 
+/*El stateNotifier es un provider que se usa para manear estados más complejos
+que sería más que nada para el manejo de clases o manejar el estado de distintas
+propiedades de una clase en concreto */
+//El primer tipo de dato que manera es el que contrla el estado
+//es el estado o clase que se manejara
+final themeNotifierProvider = StateNotifierProvider((ref) => ThemeNotifier());
 
+//Controller o Notifier del estado
+class ThemeNotifier extends StateNotifier<AppTheme> {
+  //STATE = Estado
+  ThemeNotifier() : super(AppTheme());
+
+  void toogleDakMode(){
+    state = state.copyWith(isDarkMode: !state.isDarkMode);
+  }
+
+    void changeColorIndex(int colorIndex){
+    state = state.copyWith(selectedColor: colorIndex);
+  }
+}
